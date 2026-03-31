@@ -8,7 +8,7 @@ private:
     int iNgay, iThang, iNam;
 public:
     //gán giá trị mặc định cho constructor
-    NgayThangNam(int iNgay = 1, int iThang = 1, int iNam = 1);
+    NgayThangNam(int ngay = 1, int thang = 1, int nam = 1);
     void Nhap();
     void Xuat();
     void NgayThangNamTiepTheo();
