@@ -16,13 +16,12 @@ private:
         if (Mau == 0){
             cout << "Mau so khong duoc bang 0! \n";
             return;
-
+        }
         // rut gon phan so
         long long ucln = gcd(Tu, Mau);
         Tu /= ucln;
         Mau /= ucln;
 
-                }
         // sap xep dau tru
         if (Mau < 0) {
         Tu = -Tu;
