@@ -12,7 +12,7 @@ A.Nhap();
 cout << "Nhap phan so B: \n";
 B.Nhap();
 //đã tự động rút gọn trong phương thức nhập rồi
-cout << "Phan so A la:  ";
+cout << "Phan so A la: ";
 A.Xuat();
 cout << endl;
 cout << "Phan so B la: ";
