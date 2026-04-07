@@ -23,10 +23,15 @@ void SoPhuc::Nhap()
 }
 
 //phuong thuc xuat
-//xuat ra phan thuc va phan ao, co dieu chinh dau +-
+//xuat ra phan thuc va phan ao, dieu chinh de xuat cho dep
 void SoPhuc::Xuat() const
 {
-    cout << iThuc << ((iAo < 0) ? "" : "+") << iAo << "i";
+    if (iAo == 0)
+        cout << iThuc;
+    else if (iThuc == 0 && iAo != 0)
+        cout << iAo << "i";
+    else
+        cout << iThuc << ((iAo < 0) ? "" : "+") << iAo << "i";
 }
 
 //phuong thuc tinh tong
@@ -59,5 +64,11 @@ void SoPhuc::tinhThuong(const SoPhuc& B) const
     float thuc, ao;
     thuc = (float)(this->iThuc*B.iThuc + B.iAo*this->iAo) / (B.iThuc*B.iThuc + B.iAo*B.iAo);
     ao = (float)(this->iAo*B.iThuc - B.iAo*this->iThuc) / (B.iThuc*B.iThuc + B.iAo*B.iAo);
-    cout << thuc << ((ao < 0) ? "" : "+") << ao << "i";
+
+    if (ao == 0)
+        cout << thuc;
+    else if (thuc == 0 && ao != 0)
+        cout << ao << "i";
+    else
+        cout << thuc << ((ao < 0) ? "" : "+") << ao << "i";
 }
