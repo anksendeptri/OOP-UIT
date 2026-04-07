@@ -15,7 +15,7 @@ NgayThangNam::NgayThangNam(int ngay, int thang, int nam)
 //input: năm | output: 0 hoặc 1
 bool laNamNhuan(int nam)
 {
-    return ((nam % 400 == 0) || (nam % 4 == 0 && nam & 100 != 0));
+    return ((nam % 400 == 0) || (nam % 4 == 0 && nam % 100 != 0));
 }
 
 //hàm trả về số ngày trong tháng
