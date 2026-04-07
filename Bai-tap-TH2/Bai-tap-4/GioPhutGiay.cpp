@@ -26,11 +26,13 @@ GioPhutGiay::GioPhutGiay(int gio, int phut, int giay)
 //yeu cap nhap cho den khi nhap dung
 void GioPhutGiay::Nhap()
 {
-    do
-    {
     cout << "Nhap vao gio phut giay: \n";
-    cin >> iGio >> iPhut >> iGiay;
-    } while(!(iGio >= 0 && iGio <= 24 && iPhut >= 0 && iPhut <= 60 && iGiay >= 0 && iGiay <= 60));
+    while(!(cin >> iGio >> iPhut >> iGiay) || !(iGio >= 0 && iGio <= 24 && iPhut >= 0 && iPhut <= 60 && iGiay >= 0 && iGiay <= 60))
+    {
+    cin.clear();
+    cin.ignore(100, '\n');
+    cout << "nhap lai! \n";
+    }
 }
 
 //phuong thuc xuat
