@@ -52,8 +52,8 @@ void PhanSo::Nhap()
 //xuất số nguyên khi mẫu = 1
 void PhanSo::Xuat() const
 {
-    if (iMau == 1) cout << iTu << endl;
-    else cout << iTu << "/" << iMau << endl;
+    if (iMau == 1) cout << iTu;
+    else cout << iTu << "/" << iMau;
 }
 
 //phương thức tính tổng:
@@ -99,7 +99,7 @@ PhanSo PhanSo::tinhThuong(PhanSo psk) const
 //xuất ra kết quả chứ không trả về giá trị
 void PhanSo::SoSanh(PhanSo psk) const
 {
-    cout << this->iTu << "/" << this->iMau;
+    this->Xuat();
     if (this->iTu * psk.iMau > psk.iTu * this->iMau)
         cout << " > ";
     else if (this->iTu * psk.iMau < psk.iTu * this->iMau)
