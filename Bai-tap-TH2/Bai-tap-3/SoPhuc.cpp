@@ -61,10 +61,15 @@ SoPhuc SoPhuc::tinhTich(const SoPhuc& B) const
 
 void SoPhuc::tinhThuong(const SoPhuc& B) const
 {
+    if (B.iThuc == 0 && B.iAo == 0)
+    {
+        cout << "khong the chia cho 0!";
+        return;
+    }
     float thuc, ao;
     thuc = (float)(this->iThuc*B.iThuc + B.iAo*this->iAo) / (B.iThuc*B.iThuc + B.iAo*B.iAo);
     ao = (float)(this->iAo*B.iThuc - B.iAo*this->iThuc) / (B.iThuc*B.iThuc + B.iAo*B.iAo);
-
+    
     if (ao == 0)
         cout << thuc;
     else if (thuc == 0 && ao != 0)
