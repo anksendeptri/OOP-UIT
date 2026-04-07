@@ -12,21 +12,29 @@ A.Nhap();
 cout << "Nhap phan so B: \n";
 B.Nhap();
 //đã tự động rút gọn trong phương thức nhập rồi
-cout << "Phan so A la: \n";
+cout << "Phan so A la:  ";
 A.Xuat();
-cout << "Phan so B la: \n";
+cout << endl;
+cout << "Phan so B la: ";
 B.Xuat();
+cout << endl;
 
 //tính toán
-cout << "Tong: \n";
+cout << "Tong: ";
 A.tinhTong(B).Xuat();
-cout << "Hieu: \n";
+cout << endl;
+cout << "Hieu: ";
 A.tinhHieu(B).Xuat();
-cout << "Tich: \n";
+cout << endl;
+cout << "Tich: ";
 A.tinhTich(B).Xuat();
-cout << "Thuong: \n";
+cout << endl;
+cout << "Thuong: ";
 A.tinhThuong(B).Xuat();
-cout << "So sanh: \n";
+cout << endl;
+cout << "So sanh: ";
 A.SoSanh(B);
 return 0;
 }
+
+
