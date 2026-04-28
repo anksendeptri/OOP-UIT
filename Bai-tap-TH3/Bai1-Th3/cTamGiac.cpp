@@ -5,6 +5,7 @@
 
 using namespace std;
 //ctr
+//gan so dinh = 3 (tam giac la da giac co 3 dinh)
 cTamGiac::cTamGiac()
 {
     n = 3;
@@ -46,20 +47,19 @@ int cTamGiac::KiemTra()
     double a = sqrt(pow(Dinh[1].x - Dinh[0].x, 2) + pow(Dinh[1].y - Dinh[0].y, 2));
     double b = sqrt(pow(Dinh[2].x - Dinh[1].x, 2) + pow(Dinh[2].y - Dinh[1].y, 2));
     double c = sqrt(pow(Dinh[0].x - Dinh[2].x, 2) + pow(Dinh[0].y - Dinh[2].y, 2));
-    bool deu = a == b && b == c;
-    bool can = a == b || b == c || a == c;
-    bool vuong = a*a + b*b == c*c || b*b + c*c == a*a || a*a + c*c == b*b;
-    bool vcan = can && vuong;
-    if (deu)
-        return 4; //tam giac deu
-    else if(vcan)
-		return 3; //tam giac vuong can
-    else if (can)
-        return 2; //tam giac can
-    else if (vuong)
-        return 1; //tam giac vuong
-    else
-        return 0; //tam giac thuong
+    
+    // Hàm so sánh bằng cho số thực
+    auto equal = [](double x, double y) { return fabs(x - y) < 1e-9; };
+
+    bool deu = equal(a, b) && equal(b, c);
+    bool can = equal(a, b) || equal(b, c) || equal(a, c);
+    bool vuong = equal(a * a + b * b, c * c) || equal(b * b + c * c, a * a) || equal(a * a + c * c, b * b);
+
+    if (deu) return 4;
+    if (can && vuong) return 3;
+    if (can) return 2;
+    if (vuong) return 1;
+    return 0;
 }
 
 //Phuong thuc tinh chu vi
