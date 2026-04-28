@@ -5,11 +5,14 @@
 #include <vector>
 using namespace std;
 
+// Constructor
 cArray::cArray(int size)
 {
 	n = size;
 }
 
+//phuong thuc tao mang ngau nhien
+//cach thuc: nhap so luong phan tu, sau do su dung ham rand() de tao cac so ngau nhien trong khoang 0-99 va them vao vector arr
 void cArray::taoMangNgauNhien()
 {
 	cout << "Nhap so luong phan tu: ";
@@ -29,6 +32,8 @@ void cArray::Xuat()
 	}
 }
 
+//phuong thuc dem so lan xuat hien cua mot so trong mang
+//cach thuc: nhap so can dem, sau do duyet qua vector arr va dem so lan xuat hien cua so do
 int cArray::demSoLanXuatHien(int x)
 {
 	int count = 0;
@@ -40,6 +45,8 @@ int cArray::demSoLanXuatHien(int x)
 	return count;
 }
 
+//phuong thuc kiem tra mang co tang dan hay khong
+//cach thuc: duyet qua vector arr va so sanh moi phan tu voi phan tu truoc do, neu co phan tu nao nho hon phan tu truoc do thi mang khong tang dan
 bool cArray::kiemTraTangDan()
 {
 	for (int i = 1; i < n; i++)
@@ -50,9 +57,11 @@ bool cArray::kiemTraTangDan()
 	return true;
 }
 
+//phuong thuc tim so le nho nhat trong mang
+//cach thuc: duyet qua vector arr va tim so le nho nhat, khoi tao min = 100 (lon hon gia tri lon nhat trong mang) va cap nhat min khi tim thay so le nho hon
 int cArray::timSoLeNhoNhat()
 {
-	int min = 101;
+	int min = 100;
 	for (auto num : arr)
 	{
 		if (num % 2 != 0 && num < min)
@@ -70,6 +79,9 @@ bool isPrime(int num)
 	}
 	return true;
 }
+
+//phuong thuc tim so nguyen to lon nhat trong mang
+//cach thuc: duyet qua vector arr va tim so nguyen to lon nhat, khoi tao maxPrime = -1 (nho hon gia tri nho nhat trong mang) va cap nhat maxPrime khi tim thay so nguyen to lon hon
 int cArray::timSoNguyenToLonNhat()
 {
 	int  maxPrime = -1;
@@ -80,6 +92,8 @@ int cArray::timSoNguyenToLonNhat()
 	}
 	return maxPrime;
 }
+
+//phuong thuc sap xep mang tang dan va giam dan
 // Bubble Sort
 void cArray::sapXepTangDan()
 {	
