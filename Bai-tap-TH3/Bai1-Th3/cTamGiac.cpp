@@ -15,7 +15,7 @@ cTamGiac::cTamGiac()
 //Nhap vao so dinh va toa do cua tung dinh
 void cTamGiac::Nhap()
 {
-    cout << "Nhap lan luot cac dinh theo chieu kim dong ho: \n";
+    cout << "Nhap lan luot cac dinh: \n";
     for (int i = 0; i < n; i++)
     {
         Diem temp;
