@@ -16,6 +16,7 @@ protected:
 	long long luong;
 public:
 	cNhanVien();
+	virtual ~cNhanVien() {};
 	virtual void nhap();
 	void xuat();
 	long long tinhTrongSoNgaySinh();
