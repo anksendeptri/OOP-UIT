@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="VAKALAND.vcxproj" Id="f0c984f8-4db1-4660-a3f8-ac37ea35a65b" />
+</Solution>
